@@ -1,0 +1,18 @@
+# Documentation: https://docs.brew.sh/Formula-Cookbook
+#                https://rubydoc.brew.sh/Formula
+# PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
+class Yawp < Formula
+  desc "command line app for publishing social media posts"
+  homepage "https://github.com/hughrun/yawp"
+  url "https://github.com/hughrun/yawp/archive/v0.1.1.tar.gz"
+  sha256 "fc6cd8b655c4e9a17cba170c6e3b280972b77956d75d2539cbda38f1e57147e3"
+  license "AGPL-3.0"
+
+  depends_on "rust" => :build
+
+  def install
+    # ENV.deparallelize  # if your formula fails when building in parallel
+    system "cargo", "install", *std_cargo_args
+  end
+
+end
