@@ -12,6 +12,6 @@ class Yawp < Formula
   end
 
   test do
-    assert_match "testing123", shell_output("./target/release/yawp testing123")
+    assert_match "testing123", shell_output("yawp testing123")
   end
 end
