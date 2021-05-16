@@ -7,8 +7,8 @@ class Yawp < Formula
 
   depends_on "rust" => :build
 
-  depends_on "libcrypto.so.1.1"
-  depends_on "libssl.so.1.1"
+  uses_from_macos "libcrypto"
+  uses_from_macos "libssl"
 
   def install
     system "cargo", "install", *std_cargo_args
