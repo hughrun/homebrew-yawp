@@ -6,9 +6,9 @@ class Yawp < Formula
   license "AGPL-3.0-or-later"
 
   depends_on "rust" => :build
-  
-  uses_from_macos "libcrypto.so.1.1"
-  uses_from_macos "libssl.so.1.1"
+
+  depends_on "libcrypto.so.1.1"
+  depends_on "libssl.so.1.1"
 
   def install
     system "cargo", "install", *std_cargo_args
