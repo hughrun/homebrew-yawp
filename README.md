@@ -1,4 +1,4 @@
-# Hughrun Yawp
+# yawp homebrew tap
 
 ## How do I install these formulae?
 
