@@ -6,8 +6,6 @@ class Yawp < Formula
   license "AGPL-3.0-or-later"
 
   depends_on "rust" => :build
-  depends_on "libcrypto" => :build
-  depends_on "libssl" => :build
 
   def install
     system "cargo", "install", *std_cargo_args
